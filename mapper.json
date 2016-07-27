@@ -1,0 +1,12 @@
+{
+  "Educational level - Literate without educational level - Persons": true,
+  "Educational level - Below Primary - Persons": true,
+  "Educational level - Primary - Persons": true,
+  "Educational level - Middle - Persons": true,
+  "Educational level - Matric/Secondary - Persons": true,
+  "Educational level - Higher secondary/Intermediate/Pre-University/Senior secondary - Persons": true,
+  "Educational level - Non-technical diploma or certificate not equal to degree - Persons": true,
+  "Educational level - Technical diploma or certificate not equal to degree - Persons": true,
+  "Educational level - Graduate & above - Persons": true,
+  "Educational level - Unclassified - Persons": true
+}
