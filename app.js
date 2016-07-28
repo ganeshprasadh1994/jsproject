@@ -27,4 +27,20 @@ for(var i=0;i<files.length;i++) {
     }
   }
 }
-console.log(educationalLevelAggregation);
+var c=[];var f;
+c1=Object.keys(educationalLevelAggregation);
+console.log(c1.length);
+for(i=0;i<c1.length;i++)
+{
+  b={};
+  b["Educational Category"]=c1[i];
+  f=c1[i];
+  b["Literates"]=educationalLevelAggregation[f];
+  c.push(b);
+}
+console.log(c);
+console.log(c);
+ var b1=JSON.stringify(c);
+ fs.appendFile('educat.json', b1,'utf8', function (err){
+  if (err) throw err;
+ });

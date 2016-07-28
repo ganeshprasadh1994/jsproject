@@ -32,13 +32,13 @@ console.log(c1.length);
 for(i=0;i<c1.length;i++)
 {
   b={};
-  b["age"]=c1[i];
+  b["Age-group"]=c1[i];
   f=c1[i];
-  b["total"]=obj[f];
+  b["Literates"]=obj[f];
   c.push(b);
 }
 console.log(c);
  var b1=JSON.stringify(c);
- fs.appendFile('outg.json', b1,'utf8', function (err){
+ fs.appendFile('agewise.json', b1,'utf8', function (err){
   if (err) throw err;
  });
