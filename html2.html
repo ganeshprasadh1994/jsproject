@@ -5,23 +5,29 @@
 <head>
 	<style>
   .bar{
-    fill: blue;
+    fill: black;
   }
   .bar:hover{
-    fill: green;
+    fill: blue;
   }
-	.axis {
+	.text{
 	  font: 10px sans-serif;
+		text-align: center;
 	}
 	.axis path,
 	.axis line {
 	  fill: none;
 	  stroke: #000;
-
 	}
+	  svg{
+		background-color: silver;
+		opacity: 1.5;
+	}
+
 	.x axis{
     font-size: 6px;
 	}
+
 
 	</style>
 </head>
@@ -32,7 +38,7 @@
 
 <script>
 // set the dimensions of the canvas
-var margin = {top: 20, right: 20, bottom: 700, left: 150},
+var margin = {top: 20, right: 20, bottom: 700, left: 300},
     width = 1000 - margin.left - margin.right,
     height =1000 - margin.top - margin.bottom;
 
@@ -51,7 +57,7 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
-    .ticks(25);
+    .ticks(15);
 
 
 // add the SVG element
@@ -99,7 +105,7 @@ d3.json("educat.json", function(error, data) {
 														.attr("font-weight","bold")
 															.attr("y", -30)
 			 .style("text-anchor", "middle")
-			 .text("Educational Category");
+
 
 			 svg.append("g")
 			 		.attr("class", "y axis")
@@ -114,7 +120,7 @@ d3.json("educat.json", function(error, data) {
 					.attr("font-family","arial")
 					.attr("font-weight","bold")
 			 		.style("text-anchor", "end")
-			 		.text("Literates");
+
 
   // Add bar chart
   svg.selectAll("bar")
@@ -135,7 +141,8 @@ d3.json("educat.json", function(error, data) {
 
 
 				svg.append("text")
-				.text("Education Category Wise Distribution");
+				.text("Education Category Wise Distribution")
+				.attr("x",300);
 
 });
 

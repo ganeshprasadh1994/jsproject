@@ -41,6 +41,6 @@ for(i=0;i<c1.length;i++)
 console.log(c);
 console.log(c);
  var b1=JSON.stringify(c);
- fs.appendFile('educat.json', b1,'utf8', function (err){
+ fs.writeFile('educat.json', b1,'utf8', function (err){
   if (err) throw err;
  });

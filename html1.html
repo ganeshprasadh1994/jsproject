@@ -5,11 +5,11 @@
 <head>
 	<style>
   .bar{
-    fill: blue;
+    fill: black;
   }
   .bar:hover{
     fill: green;
-  }
+	}
 	.axis {
 	  font: 10px sans-serif;
 	}
@@ -22,7 +22,14 @@
 	.x axis{
 		font:6px;
 	}
-
+	/*text{
+		font-size: 28px;
+		font-family: cursive;
+	}*/
+	svg{
+		background-color: silver;
+		opacity:1.5;
+	}
 	</style>
 </head>
 
@@ -99,7 +106,7 @@ d3.json("agewise.json", function(error, data) {
 														.attr("font-weight","bold")
 															.attr("y", -30)
 			 .style("text-anchor", "middle")
-			 .text("Age-group");
+
 
 			 svg.append("g")
 			 		.attr("class", "y axis")
@@ -114,7 +121,7 @@ d3.json("agewise.json", function(error, data) {
 					.attr("font-family","arial")
 					.attr("font-weight","bold")
 			 		.style("text-anchor", "end")
-			 		.text("Literacy");
+
 
   // Add bar chart
   svg.selectAll("bar")
@@ -126,16 +133,10 @@ d3.json("agewise.json", function(error, data) {
       .attr("y", function(d) { return y(d["Literates"]); })
       .attr("height", function(d) { return height - y(d["Literates"]); });
 
-			svg.append("rect")
-						.attr("width",30)
-						.attr("height",20)
-						.attr("x",820)
-						.attr("y",30)
-						.attr("fill",black);
-
-
 				svg.append("text")
-				.text("Age-Wise Literacy Distribution");
+				.text("Age-Wise Literacy Distribution")
+				.attr("x",100)
+				.attr("y",100);
 
 });
 

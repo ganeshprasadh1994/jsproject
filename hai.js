@@ -26,7 +26,7 @@ for(var i=0;i<fn.length;i++)
     }
   }
  }
-var c=[];var f;
+var c=[];
 c1=Object.keys(obj);
 console.log(c1.length);
 for(i=0;i<c1.length;i++)
@@ -39,6 +39,6 @@ for(i=0;i<c1.length;i++)
 }
 console.log(c);
  var b1=JSON.stringify(c);
- fs.appendFile('agewise.json', b1,'utf8', function (err){
+ fs.writeFile('agewise.json', b1,'utf8', function (err){
   if (err) throw err;
  });
